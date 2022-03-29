@@ -1,0 +1,6 @@
+.flake8
+.hadolint.yaml
+.isort.cfg
+.markdownlint.yaml
+.shellcheckrc
+.trunk/
