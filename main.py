@@ -699,18 +699,14 @@ def train_one_epoch(
 
             ## ## Step 4. update the memory buffer for local-group supervision losses.
             # for student, we only update memory by the image of size 224 and weak augmentations
-            idx_weak = torch.nonzero(weak_aug_flags)
-            len_weak = len(idx_weak)
-            if len_weak > 0:
-                idx_weak = idx_weak.squeeze(-1)
-                student_features = (student_memory_tokens.chunk(2))[0]
-                student_weak = student_features[idx_weak]
-                student_mem._dequeue_and_enqueue(
-                    student_weak, student_weak, student_weak
-                )
+            student_features = (student_memory_tokens.chunk(2))[0]
+            len_weak = student_mem._dequeue_and_enqueue(
+                student_features, 
+                weak_aug_flags, 
+            )
 
             teacher_weak = (teacher_memory_tokens.chunk(2))[0]
-            teacher_mem._dequeue_and_enqueue(teacher_weak, teacher_weak, teacher_weak)
+            _ = teacher_mem._dequeue_and_enqueue(teacher_weak, None)
 
         if not math.isfinite(total_loss.item()):
             print("Loss is {}, stopping training".format(total_loss.item()), force=True)
@@ -800,7 +796,7 @@ def train_one_epoch(
                     log_results,
                     optimizer.param_groups[0]["lr"],
                     optimizer.param_groups[0]["weight_decay"],
-                    len_weak / len(weak_aug_flags),
+                    len_weak / len(weak_aug_flags) / args.world_size,
                 )
             )
 
