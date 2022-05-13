@@ -288,33 +288,44 @@ class Block_mem(nn.Module):
         self.register_buffer("queue_ptr", torch.zeros(1, dtype=torch.long))
 
     @torch.no_grad()
-    def _dequeue_and_enqueue(self, query, keys, values):
+    def _dequeue_and_enqueue(self, query, weak_aug_flags):
         """
         update memory queue
         """
+        # import pdb
+        # pdb.set_trace()
+        len_weak = 0
         query = concat_all_gather(query)
-        keys = concat_all_gather(keys)
-        values = concat_all_gather(values)
+        if weak_aug_flags is not None:
+            weak_aug_flags = weak_aug_flags.cuda()
+            weak_aug_flags = concat_all_gather(weak_aug_flags)
+            idx_weak = torch.nonzero(weak_aug_flags)
+            len_weak = len(idx_weak)
+            if len_weak > 0:
+                idx_weak = idx_weak.squeeze(-1) 
+                query = query[idx_weak]
+            else:
+                return len_weak
 
-        all_size = keys.shape[0]
+        all_size = query.shape[0]
         ptr = int(self.queue_ptr)
         remaining_size = ptr + all_size - self.K
         if remaining_size <= 0:
             self.queue_q[ptr : ptr + all_size, :] = query
-            self.queue_k[ptr : ptr + all_size, :] = keys
-            self.queue_v[ptr : ptr + all_size, :] = values
+            self.queue_k[ptr : ptr + all_size, :] = query
+            self.queue_v[ptr : ptr + all_size, :] = query
             ptr = ptr + all_size
             self.queue_ptr[0] = (ptr + all_size) % self.K
         else:
             self.queue_q[ptr : self.K, :] = query[0 : self.K - ptr, :]
-            self.queue_k[ptr : self.K, :] = keys[0 : self.K - ptr, :]
-            self.queue_v[ptr : self.K, :] = values[0 : self.K - ptr, :]
+            self.queue_k[ptr : self.K, :] = query[0 : self.K - ptr, :]
+            self.queue_v[ptr : self.K, :] = query[0 : self.K - ptr, :]
 
             self.queue_q[0:remaining_size, :] = query[self.K - ptr :, :]
-            self.queue_k[0:remaining_size, :] = keys[self.K - ptr :, :]
-            self.queue_v[0:remaining_size, :] = values[self.K - ptr :, :]
+            self.queue_k[0:remaining_size, :] = query[self.K - ptr :, :]
+            self.queue_v[0:remaining_size, :] = query[self.K - ptr :, :]
             self.queue_ptr[0] = remaining_size
-        return
+        return len_weak
 
     @torch.no_grad()
     def _get_similarity_index(self, x):
@@ -362,12 +373,13 @@ class vit_mem(nn.Module):
         super().__init__()
         self.block = Block_mem(dim, K, top_n)
 
-    def _dequeue_and_enqueue(self, query, keys, values):
+    def _dequeue_and_enqueue(self, query, weak_aug_flags):
         """
         update memory queue
         """
         query = query.float()
-        self.block._dequeue_and_enqueue(query, keys, values)
+        weak_num = self.block._dequeue_and_enqueue(query, weak_aug_flags)
+        return weak_num
 
     def forward(self, query):
         """
