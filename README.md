@@ -84,8 +84,8 @@ You can choose to download only the weights of the pretrained backbone used for 
     <td>250</td>
     <td>80.3%</td>
     <td>82.1%</td>
-    <td><a href="https://drive.google.com/file/d/1K76a-YnFYcmDXUZ_UlYVYFrWOt2a6733/view?usp=sharing">backbone only</a></td>
-    <td><a href="https://drive.google.com/file/d/1Q5Ukvucx44YawyOhMEAY13Ppb8OOWOAB/view?usp=sharing">full ckpt</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models">backbone only</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models">full ckpt</a></td>
     <td><a href="https://drive.google.com/file/d/1p8XhaA2_Zbejm__UT8iNKG8r5tzS9c6c/view?usp=sharing">args</a></td>
     <td><a href="https://drive.google.com/file/d/1JLVcUNfkyBI0BcMm7OpNU_3KTxIABK0Z/view?usp=sharing">logs</a></td>
     <td><a href="https://drive.google.com/file/d/1rqWenRFN0czat_55GY9GNOu7gS6fww3g/view?usp=sharing">eval logs</a></td>
