@@ -36,11 +36,11 @@ You can choose to download only the weights of the pretrained backbone used for 
     <td>100</td>
     <td>72.3%</td>
     <td>76.4%</td>
-    <td><a href="https://drive.google.com/file/d/1V2TyArzr7qY93UFglPBHRfYVyAMEfsHR/view?usp=sharing">backbone only</a></td>
-    <td><a href="https://drive.google.com/file/d/1AePcCeUEhK0nb9syQKufqqnhpUEr9Rji/view?usp=sharing">full ckpt</a></td>
-    <td><a href="https://drive.google.com/file/d/17phHQx88f4_xSqkPtIYvUoUE2U-1tovg/view?usp=sharing">args</a></td>
-    <td><a href="https://drive.google.com/file/d/1UBMTB-C3BnNKT5939fhSstHc9H30Vizd/view?usp=sharing">logs</a></td>
-    <td><a href="https://drive.google.com/file/d/1MkXctkgqEXjWWRs4Cz5CyTTx_IHDOP4G/view?usp=sharing">eval logs</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_small_100ep">backbone only</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_small_100ep">full ckpt</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_small_100ep">args</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_small_100ep">logs</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_small_100ep">eval logs</a></td>
   </tr>
   <tr>
     <td>ViT-S/16</td>
@@ -48,11 +48,11 @@ You can choose to download only the weights of the pretrained backbone used for 
     <td>300</td>
     <td>74.8%</td>
     <td>78.2%</td>
-    <td><a href="https://drive.google.com/file/d/1ZAPQ0HiDZO5Uk7jVqF46H6VbGxunZkuf/view?usp=sharing">backbone only</a></td>
-    <td><a href="https://drive.google.com/file/d/1EO-_kYlAt23qgFYZF2u-KLks5js9LvrZ/view?usp=sharing">full ckpt</a></td>
-    <td><a href="https://drive.google.com/file/d/1b6zLZ3r_mZbk17SvhJIZF2VCoYVbJUnU/view?usp=sharing">args</a></td>
-    <td><a href="https://drive.google.com/file/d/1L7VzH1rztoraBCBNVWL-Y8k7Y8PFU773/view?usp=sharing">logs</a></td>
-    <td><a href="https://drive.google.com/file/d/1KgnX8ReXIVsu65_-p7NWPH8S0HEDPMUU/view?usp=sharing">eval logs</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_small_300ep">backbone only</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_small_300ep">full ckpt</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_small_300ep">args</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_small_300ep">logs</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_small_300ep">eval logs</a></td>
   </tr>
   <tr>
     <td>ViT-S/16</td>
@@ -60,11 +60,11 @@ You can choose to download only the weights of the pretrained backbone used for 
     <td>800</td>
     <td>75.6%</td>
     <td>78.9%</td>
-    <td><a href="https://drive.google.com/file/d/1KMdhxxWc2JXAiFqVxX584V4RvlJgckGq/view?usp=sharing">backbone only</a></td>
-    <td><a href="https://drive.google.com/file/d/1FBaOt0Rjxm6yyJadttOyN6hSh8ueZ0dh/view?usp=sharing">full ckpt</a></td>
-    <td><a href="https://drive.google.com/file/d/19Ma-eSIgdwLoBg6wBXeFiW46zCI2EHvH/view?usp=sharing">args</a></td>
-    <td><a href="https://drive.google.com/file/d/1wX4AUO5NBVZUb8jN1iGBRkS17sszb4_O/view?usp=sharing">logs</a></td>
-    <td><a href="https://drive.google.com/file/d/12tiO4glWZNB044TYiPPCfbnUX_9AbqVc/view?usp=sharing">eval logs</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_small_800ep">backbone only</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_small_800ep">full ckpt</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_small_800ep">args</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_small_800ep">logs</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_small_800ep">eval logs</a></td>
   </tr>
   <tr>
     <td>ViT-B/16</td>
@@ -72,11 +72,11 @@ You can choose to download only the weights of the pretrained backbone used for 
     <td>400</td>
     <td>78.0%</td>
     <td>80.6%</td>
-    <td><a href="https://drive.google.com/file/d/13NUziwToBXBmS7n7V_1Z5N6EG_7bcncW/view?usp=sharing">backbone only</a></td>
-    <td><a href="https://drive.google.com/file/d/1M41TVVFyVRDTK5kbgLCEImrxw0AVtebb/view?usp=sharing">full ckpt</a></td>
-    <td><a href="https://drive.google.com/file/d/1-5fB5ZCVQAfxTXZ6ro56AVkhb3whpaJc/view?usp=sharing">args</a></td>
-    <td><a href="https://drive.google.com/file/d/11RlCx6eViRnFD6gBlr_lOOxOhu-L6l6D/view?usp=sharing">logs</a></td>
-    <td><a href="https://drive.google.com/file/d/1gOR250QFLZfe40pLNPcOqaLPAnKLuE_C/view?usp=sharing">eval logs</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_base_400ep">backbone only</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_base_400ep">full ckpt</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_base_400ep">args</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_base_400ep">logs</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_base_400ep">eval logs</a></td>
   </tr>
   <tr>
     <td>ViT-L/16</td>
@@ -84,11 +84,11 @@ You can choose to download only the weights of the pretrained backbone used for 
     <td>250</td>
     <td>80.3%</td>
     <td>82.1%</td>
-    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models">backbone only</a></td>
-    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models">full ckpt</a></td>
-    <td><a href="https://drive.google.com/file/d/1p8XhaA2_Zbejm__UT8iNKG8r5tzS9c6c/view?usp=sharing">args</a></td>
-    <td><a href="https://drive.google.com/file/d/1JLVcUNfkyBI0BcMm7OpNU_3KTxIABK0Z/view?usp=sharing">logs</a></td>
-    <td><a href="https://drive.google.com/file/d/1rqWenRFN0czat_55GY9GNOu7gS6fww3g/view?usp=sharing">eval logs</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_large_250ep">backbone only</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_large_250ep">full ckpt</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_large_250ep">args</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_large_250ep">logs</a></td>
+    <td><a href="https://huggingface.co/zhoupans/Mugs/tree/main/pretrained%20models/vit_large_250ep">eval logs</a></td>
   </tr>
 </table>
 
